@@ -1,0 +1,59 @@
+.button {
+  background: linear-gradient(267.26deg, #333333cc -211.12%, var(--color-gold) 91.05%);
+  border-radius: 10px;
+  box-sizing: border-box;
+  color: #fff;
+  display: block;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 19px;
+  padding: 15px 76px;
+  transition: 0.4s;
+  width: fit-content;
+  position: relative;
+}
+.button_min {
+  padding: 15px 15px;
+}
+.button_min:nth-child(2) {
+  margin-left: 20px;
+}
+.button span {
+  position: relative;
+  z-index: 2;
+}
+.button::after {
+  background: linear-gradient(267.26deg, var(--color-gold) 21.05%, #fff 211.12%);
+  border-radius: 10px;
+  bottom: 0;
+  content: "";
+  height: 100%;
+  left: 0;
+  margin: auto;
+  opacity: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: opacity 0.5s;
+  width: 100%;
+  z-index: 1;
+}
+.button:hover::after {
+  opacity: 1;
+  transition: opacity 0.5s;
+}
+
+@media screen and (max-width: 1200px) {
+  .button {
+    margin: 0 auto;
+  }
+  .button_min {
+    margin: 5px 0;
+    min-width: 300px;
+  }
+  .button_min:nth-child(2) {
+    margin-left: 0px;
+  }
+}
+
+/*# sourceMappingURL=button.css.map */

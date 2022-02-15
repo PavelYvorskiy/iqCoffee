@@ -1,0 +1,149 @@
+.home-banner {
+  height: 100vh;
+  min-height: 650px;
+  overflow: hidden;
+}
+
+.home-banner-img {
+  width: 100%;
+  height: 100%;
+  min-height: 400px;
+  display: block;
+  background: linear-gradient(#ffffff70, #ffffffeb), url(../../../assets/img/fons/fons_calcul.jpg);
+  background-size: cover;
+  background-position: right;
+  background-repeat: no-repeat;
+  transform: scaleX(-1);
+}
+
+.content-wrapper {
+  margin: 0 auto;
+  max-width: 1200px;
+  height: 75%;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  transform: scaleX(-1);
+}
+
+.content-wrapper-description {
+  color: #333333;
+  text-align: center;
+}
+.content-wrapper-description__textBlock {
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+}
+.content-wrapper-description__logo {
+  padding: 0px 20px;
+}
+.content-wrapper-description__logo img {
+  width: 220px;
+  height: auto;
+}
+.content-wrapper-description__logo h1 {
+  color: var(--color-gold);
+}
+.content-wrapper-description h1 {
+  font-size: 42px;
+}
+.content-wrapper-description h1 b {
+  color: var(--color-gold);
+}
+.content-wrapper-description span {
+  font-size: 36px;
+}
+.content-wrapper-description p {
+  font-size: 18px;
+  line-height: 2;
+  font-weight: 500;
+  text-align: center;
+}
+.content-wrapper-description p b {
+  color: var(--color-gold);
+}
+
+@media screen and (max-width: 1200px) {
+  .content-wrapper {
+    height: 100%;
+    padding: 0 20px;
+    margin-top: 90px;
+  }
+
+  .content-wrapper-description {
+    color: #333333;
+    text-align: center;
+  }
+  .content-wrapper-description__textBlock {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .content-wrapper-description__logo {
+    padding: 20px;
+  }
+  .content-wrapper-description__logo img {
+    width: 120px;
+    height: auto;
+  }
+  .content-wrapper-description__logo h1 {
+    color: var(--color-gold);
+  }
+  .content-wrapper-description h1 {
+    font-size: 42px;
+  }
+  .content-wrapper-description h1 b {
+    color: var(--color-gold);
+  }
+  .content-wrapper-description span {
+    font-size: 36px;
+  }
+  .content-wrapper-description p {
+    font-size: 18px;
+    line-height: 2;
+    font-weight: 500;
+    text-align: center;
+  }
+  .content-wrapper-description p b {
+    color: var(--color-gold);
+  }
+}
+@media screen and (max-width: 550px) {
+  .home-banner-img {
+    width: 100%;
+    height: 100%;
+    min-height: 400px;
+    display: block;
+    background: linear-gradient(#ffffffd4, #ffffffeb), url(../../../assets/img/fons/fons_calcul.jpg);
+    background-size: cover;
+    background-position: right;
+    background-repeat: no-repeat;
+    transform: scaleX(-1);
+  }
+
+  .content-wrapper-description h1 {
+    font-size: 32px;
+  }
+  .content-wrapper-description__logo img {
+    width: 100px;
+    height: auto;
+  }
+}
+@media screen and (max-width: 450px) {
+  .content-wrapper-description h1 {
+    font-size: 24px;
+  }
+  .content-wrapper-description p {
+    font-size: 16px;
+  }
+  .content-wrapper-description__logo img {
+    width: 90px;
+    height: auto;
+  }
+}
+
+/*# sourceMappingURL=home-baner.css.map */

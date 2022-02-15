@@ -1,0 +1,210 @@
+.coffee {
+  margin-top: 50px;
+  width: 100%;
+}
+.coffee__title {
+  text-align: center;
+}
+.coffee__title h3 {
+  font-size: 42px;
+  text-transform: uppercase;
+  font-weight: 600;
+  padding-top: 50px;
+  color: #333333;
+}
+
+.coffee-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 50px 0 100px 0;
+  min-height: 600px;
+}
+
+.coffee-card {
+  width: 320px;
+  height: 500px;
+  background-size: cover;
+  box-shadow: 0 0 30px 0 rgba(148, 148, 148, 0.55);
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+}
+.coffee-card_1 {
+  background-image: url(../../../assets/img/coffee_product/image-015.png);
+}
+.coffee-card_2 {
+  background-image: url(../../../assets/img/coffee_product/image-017.png);
+}
+.coffee-card_3 {
+  background-image: url(../../../assets/img/coffee_product/image-016.png);
+}
+
+.coffee-card-description {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.987);
+  transform: translateY(86%);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  transition: 1s;
+}
+.coffee-card-description__block {
+  padding: 20px;
+  margin-top: 60px;
+}
+.coffee-card-description__block h3 {
+  color: var(--color-gold);
+  font-size: 26px;
+  font-weight: 500;
+  padding: 10px 0;
+}
+.coffee-card-description__block span {
+  color: var(--color-gold);
+  font-size: 20px;
+}
+.coffee-card-description__block p {
+  color: #333333ac;
+  line-height: 1.4;
+  font-size: 18px;
+}
+.coffee-card-description.active {
+  transform: translateY(0);
+  transition: 1s;
+}
+.coffee-card-description.active .chevron {
+  animation: moveEst 3s ease-out 2s infinite;
+}
+.coffee-card-description.active .chevron:first-child {
+  animation: moveEst 3s ease-out 1s infinite;
+}
+.coffee-card-description.active .chevron:nth-child(2) {
+  animation: moveEst 3s ease-out infinite;
+}
+.coffee-card-description.active .chevron::before {
+  content: " ";
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 51%;
+  background: var(--color-gold);
+  left: 0;
+  transform: skew(0deg, 45deg);
+}
+.coffee-card-description.active .chevron::after {
+  content: " ";
+  position: absolute;
+  top: 0;
+  height: 100%;
+  right: 0;
+  width: 50%;
+  transform: skew(0deg, -45deg);
+  background: var(--color-gold);
+}
+
+.scroll-arrow {
+  position: absolute;
+  left: 50%;
+  top: 20px;
+  width: 24px;
+  height: 24px;
+  transform: translateX(-50%) translateY(-50%);
+  z-index: 10;
+}
+
+.chevron {
+  position: absolute;
+  width: 28px;
+  height: 4px;
+  opacity: 0;
+  transform: scale3d(0.5, 0.5, 0.5);
+  animation: move 3s ease-out infinite;
+}
+.chevron:first-child {
+  animation: move 3s ease-out 1s infinite;
+}
+.chevron:nth-child(2) {
+  animation: move 3s ease-out 2s infinite;
+}
+.chevron::before {
+  content: " ";
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 51%;
+  background: var(--color-gold);
+  left: 0;
+  transform: skew(0deg, -45deg);
+}
+.chevron::after {
+  content: " ";
+  position: absolute;
+  top: 0;
+  height: 100%;
+  right: 0;
+  width: 50%;
+  transform: skew(0deg, 45deg);
+  background: var(--color-gold);
+}
+
+@keyframes move {
+  25% {
+    opacity: 0;
+    transform: translateY(55px) scale3d(0.5, 0.5, 0.5);
+  }
+  33% {
+    opacity: 1;
+    transform: translateY(40px);
+  }
+  67% {
+    opacity: 1;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes moveEst {
+  100% {
+    opacity: 0;
+    transform: translateY(55px) scale3d(0.5, 0.5, 0.5);
+  }
+  67% {
+    opacity: 1;
+    transform: translateY(40px);
+  }
+  33% {
+    opacity: 1;
+    transform: translateY(30px);
+  }
+  25% {
+    opacity: 1;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .coffee-content {
+    padding: 0 20px;
+    justify-content: center;
+  }
+
+  .coffee-card {
+    margin: 10px;
+  }
+}
+@media screen and (max-width: 750px) {
+  .coffee__title h3 {
+    padding: 0;
+  }
+}
+@media screen and (max-width: 750px) {
+  .coffee__title h3 {
+    font-size: 32px;
+  }
+}
+
+/*# sourceMappingURL=coffee.css.map */

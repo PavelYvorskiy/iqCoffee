@@ -1,0 +1,111 @@
+.service {
+  margin-top: 50px;
+  width: 100%;
+}
+.service__title {
+  text-align: center;
+}
+.service__title h3 {
+  font-size: 42px;
+  text-transform: uppercase;
+  font-weight: 600;
+  padding-top: 50px;
+  color: #333333;
+}
+
+.service-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 50px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 15px 0;
+}
+.service-content__description {
+  margin-top: -20px;
+  width: 48%;
+}
+.service-content__description P {
+  text-align: start;
+  font-size: 20px;
+  line-height: 2;
+}
+.service-content__description P b {
+  color: var(--color-gold);
+}
+.service-content__description h4 {
+  font-size: 24px;
+  text-align: start;
+  color: var(--color-gold);
+}
+.service-content__images {
+  width: 48%;
+  display: flex;
+  flex-direction: column;
+}
+.service-content__item {
+  width: 100%;
+  height: 180px;
+  margin: 10px 0;
+}
+.service-content__item_1 {
+  background: linear-gradient(black, rgba(0, 0, 0, 0.1)), url(../../../assets/img/fons/wmf_coffee_machines_service_07_2019_2.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.service-content__item_2 {
+  background: linear-gradient(black, rgba(0, 0, 0, 0.1)), url(../../../assets/img/fons/ceramic.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.service-content__item_3 {
+  background: linear-gradient(black, rgba(0, 0, 0, 0.1)), url(../../../assets/img/fons/clock.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+@media screen and (max-width: 1200px) {
+  .service-content {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  .service-content__description {
+    width: 100%;
+  }
+  .service-content__description p {
+    margin: 30px 0;
+  }
+  .service-content__images {
+    margin-top: 30px;
+    width: 100%;
+    align-items: center;
+  }
+  .service-content__item {
+    width: 100%;
+    height: 230px;
+  }
+}
+@media screen and (max-width: 550px) {
+  .service__title h3 {
+    font-size: 32px;
+  }
+
+  .service-content {
+    margin-top: 0;
+  }
+  .service-content__description p {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  .service-content__description h4 {
+    font-size: 20px;
+  }
+}
+
+/*# sourceMappingURL=service.css.map */

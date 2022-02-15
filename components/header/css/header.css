@@ -1,0 +1,240 @@
+.header {
+  width: 100%;
+  padding: 15px 0;
+  background-color: rgba(255, 255, 255, 0.96);
+  position: fixed;
+  top: 0;
+  z-index: 10;
+}
+
+.header-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+}
+
+.navigation {
+  position: relative;
+  display: none;
+}
+
+.navbar-content {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.navbar-content__btn {
+  display: none;
+  position: absolute;
+  background: transparent;
+  width: 50px;
+  height: 50px;
+  outline: none;
+  cursor: pointer;
+  z-index: 100000;
+}
+
+.logo {
+  display: flex;
+  align-items: flex-end;
+  transform: translateX(-50px);
+}
+.logo img {
+  width: auto;
+  height: 60px;
+}
+
+.navbar-menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.navbar-menu__items {
+  padding: 0 10px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.navbar-menu__link {
+  color: #333333;
+  font-size: 14px;
+  font-weight: 300;
+  position: relative;
+  text-transform: uppercase;
+}
+.navbar-menu__link b {
+  color: var(--color-gold);
+  font-weight: 300;
+}
+.navbar-menu__link.active {
+  color: var(--color-gold);
+}
+.navbar-menu__link:hover::after {
+  content: "";
+  display: block;
+  height: 2px;
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  background: var(--color-gold);
+  animation-name: linkBorder;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+.navbar-menu-mob {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.navbar-menu-mob__items {
+  padding: 0 10px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin: 10px 0;
+}
+.navbar-menu-mob__link {
+  color: #333333;
+  font-size: 14px;
+  font-weight: 300;
+  position: relative;
+  text-transform: uppercase;
+}
+.navbar-menu-mob__link b {
+  color: var(--color-gold);
+  font-weight: 300;
+}
+.navbar-menu-mob__link:hover::after {
+  content: "";
+  display: block;
+  height: 2px;
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  background: var(--color-gold);
+  animation-name: linkBorder;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+.navbar-mob {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  display: none;
+  width: 100%;
+  height: calc(100vh - 90px);
+  padding: 50px 20px;
+  transform: translateX(-100%);
+  background-color: #fff;
+  box-sizing: border-box;
+  z-index: 90;
+  transition: all 0.5s;
+}
+.navbar-mob.active {
+  transform: translateX(0);
+}
+
+@media screen and (max-width: 1200px) {
+  .navbar-mob {
+    display: block;
+  }
+
+  .logo {
+    transform: translateX(0);
+  }
+
+  .navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 80px;
+    z-index: 1000;
+  }
+
+  .navbar-menu {
+    display: none;
+  }
+
+  .navbar-content {
+    justify-content: space-between;
+  }
+  .navbar-content__logo {
+    margin: 0 auto;
+  }
+  .navbar-content__btn {
+    display: block;
+    overflow: hidden;
+    outline: none;
+    text-decoration: none;
+    z-index: 99;
+    margin-right: 10px;
+  }
+  .navbar-content__btn span {
+    display: block;
+    position: absolute;
+    top: 23px;
+    transform: rotate(180deg);
+    height: 2px;
+    width: 25px;
+    right: 12px;
+    background: var(--color-gold);
+    transition: all 1s;
+  }
+  .navbar-content__btn span::before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0px;
+    height: 2px;
+    width: 25px;
+    background: var(--color-gold);
+    transition: 1s;
+    top: 8px;
+  }
+  .navbar-content__btn span::after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0px;
+    height: 2px;
+    width: 25px;
+    background: var(--color-gold);
+    transition: 1s;
+    bottom: 8px;
+  }
+  .navbar-content__btn.active span {
+    transition: all 0s;
+    width: 0;
+  }
+  .navbar-content__btn.active span::after {
+    bottom: 1px;
+    transform: rotate(45deg);
+    transition: 0.3s;
+  }
+  .navbar-content__btn.active span::before {
+    top: 0;
+    transform: rotate(-45deg);
+    transition: 0.3s;
+  }
+}
+@keyframes linkBorder {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+/*# sourceMappingURL=header.css.map */
